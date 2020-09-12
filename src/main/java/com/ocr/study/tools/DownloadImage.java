@@ -1,10 +1,10 @@
-package com.ocr.study.service;
+package com.ocr.study.tools;
 
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class DownloadService {
+public class DownloadImage {
     public static void download(String urlStr, String filename, String savePath) throws IOException {
 
         URL url = new URL(urlStr);
