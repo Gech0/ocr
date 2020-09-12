@@ -1,12 +1,15 @@
 package com.ocr.study;
 
+import com.ocr.study.service.CaptchaService;
 import com.ocr.study.service.WeeklyImageDownLoadService;
+
+import java.io.IOException;
 
 public class ClientMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //获取图片
-        WeeklyImageDownLoadService.down();
+        new WeeklyImageDownLoadService().down();
 
         //图片处理(分割)
 
@@ -16,7 +19,10 @@ public class ClientMain {
 
         //下载验证码
         //识别验证码
+        String captcha = new CaptchaService().getCaptchaCode();
 
+        //爬取信息
         //返回结果
+
     }
 }
